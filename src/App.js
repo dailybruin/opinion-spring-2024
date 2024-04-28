@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Landing from "./components/Landing";
 
 function App() {
   const [ data, setData ] = useState(null);
@@ -14,8 +15,9 @@ function App() {
   }, [])
 
   return data && (
-    <div className="App">
+    <div className="App" style={{ backgroundColor: "#08091F" }}>
       <Header/>
+      <Landing data={data}></Landing>
       Hello Daily Bruin!
       <Footer/>
     </div>
