@@ -4,6 +4,7 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ArticleCard from './components/ArticleCard';
+import Playlist from './components/Playlist';
 
 function App() {
   const [ data, setData ] = useState(null);
@@ -15,10 +16,9 @@ function App() {
   }, [])
 
   return data && (
-    <div className="App">
+    <div className="App" style={{ backgroundColor: "#08091F" }}>
       <Header/>
-      Hello Daily Bruin!
-      <ArticleCard></ArticleCard>
+      <ArticleCard>articles={data.articles}</ArticleCard>
       <Footer/>
     </div>
   );
