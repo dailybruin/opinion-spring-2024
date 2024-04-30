@@ -5,6 +5,9 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import DesktopArticleGrid from "./components/DesktopArticleGrid";
 import MobileArticleGrid from "./components/MobileArticleGrid";
+import ArticleCard from './components/ArticleCard';
+import Playlist from './components/Playlist';
+import Blurb from './components/Blurb';
 
 function App() {
   const [ data, setData ] = useState(null);
@@ -16,10 +19,12 @@ function App() {
   }, [])
 
   return data && (
-    <div className="App">
+    <div className="App" style={{ backgroundColor: "#08091F" }}>
       <Header/>
-      Hello Daily Bruin!
+      <Blurb blurb_text={data.blurb[0].blurb_text}/>
+      <Playlist/>
       <DesktopArticleGrid/>
+      <ArticleCard>articles={data.articles}</ArticleCard>
       <Footer/>
     </div>
   );
