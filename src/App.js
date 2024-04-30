@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ArticleCard from './components/ArticleCard';
 import Playlist from './components/Playlist';
 
 function App() {
@@ -17,8 +18,7 @@ function App() {
   return data && (
     <div className="App" style={{ backgroundColor: "#08091F" }}>
       <Header/>
-      <Playlist/>
-      Hello Daily Bruin!
+      <ArticleCard>articles={data.articles}</ArticleCard>
       <Footer/>
     </div>
   );
