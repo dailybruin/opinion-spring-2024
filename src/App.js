@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ArticleCard from './components/ArticleCard';
 import Playlist from './components/Playlist';
+import Blurb from './components/Blurb';
 
 function App() {
   const [ data, setData ] = useState(null);
@@ -18,6 +19,8 @@ function App() {
   return data && (
     <div className="App" style={{ backgroundColor: "#08091F" }}>
       <Header/>
+      <Blurb blurb_text={data.blurb[0].blurb_text}/>
+      <Playlist/>
       <ArticleCard>articles={data.articles}</ArticleCard>
       <Footer/>
     </div>
