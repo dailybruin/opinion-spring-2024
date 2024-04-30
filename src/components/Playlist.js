@@ -9,8 +9,13 @@ position: relative;
 height: 2000px;
 `
 const Curve = styled.div`
-float: left;
-position: absolute;
+height: 100pt;
+width: 15px;
+img {
+    width: 10%;    /* Set the width of the image to 10% of the Curve container */
+    height: 50%;   /* Set the height of the image to 50% of the Curve container */
+    object-fit: contain; /* Ensures the content of the image is scaled correctly */
+}
 `
 
 const Title = styled.div`

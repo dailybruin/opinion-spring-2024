@@ -12,6 +12,7 @@ import { mediaQueries } from '../shared/config';
 const Container = styled.div`
 	background-color: #08091F;
 	height: auto;
+  width: 100%;
 	color: white;
 	padding: 60px 0 10px 0;
     text-align: center;
@@ -48,6 +49,9 @@ const Flip = styled.div`
 img {
   transform: scaleX(-1);
   margin-bottom: 100px;
+  object-fit: contain; /* Keeps entire image visible */
+  width: 100%;
+  height: 100%;
 }
 `
 
