@@ -7,16 +7,22 @@ import playlist_temp from '../images/playlist-temp.png'
 const Container = styled.div`
 position: relative;
 height: 2000px;
+width: 100%;
 `
 const Curve = styled.div`
 float: left;
 position: absolute;
+img {
+    width: 25%;
+    float: left;
+}
 `
 
 const Title = styled.div`
 display: flex;
 justify-content: center;
 position: absolute;
+width: 100%;
 top: 780px;
 `
 const Text = styled.div`
@@ -33,6 +39,9 @@ top: 1000px;
 width: 100%;
 display: flex;
 justify-content: center;
+img {
+    width: 80%;
+}
 `
 const Playlist = () => {
     return (
