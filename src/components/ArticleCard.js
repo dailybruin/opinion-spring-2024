@@ -31,14 +31,18 @@ const Container = styled.div`
 `
 const Title = styled.div `
     height: 81px;
+    width: 450px;
+    line-height: 81px;
+    box-sizing: border-box;
     font-weight: 400;
     font-size: 24px;
-    color: black;
     text-align: center;
-    max-width: 90%;
-    margin-top: -130px;
-    margin-left: 100px;
+    overflow: hidden;
     font-family: "Caveat", cursive;
+    position: absolute;
+    top: 70px;
+    left: 60px;
+    
 `
 const ByLine = styled.div`
     width: 450px;
@@ -47,14 +51,16 @@ const ByLine = styled.div`
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-size: 16px;
-    margin-top: 100px;
-    margin-right: 200px;
     text-align: center;
+    position: absolute;
+    left: 70px;
+    top: 255px;
+    
 `
 const ArticleCard = (props) => {
     return(
         <Container color={props.article_color}>
-            <Title>This is a really long article title. {props.article_title}</Title>
+            <Title>This is a really long article title. This is a really long title. {props.article_title}</Title>
             <ByLine>BY JOE BRUIN {props.article_byline}</ByLine>
         </Container>
     )
