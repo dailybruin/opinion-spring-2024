@@ -25,6 +25,8 @@ function App() {
       <Playlist/>
       <DesktopArticleGrid/>
       <ArticleCard>articles={data.articles}</ArticleCard>
+      <Blurb></Blurb>
+      <Playlist></Playlist>
       <Footer/>
     </div>
   );
