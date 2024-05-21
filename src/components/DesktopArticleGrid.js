@@ -1,7 +1,7 @@
 import leftsquiggle from '../images/articles-left.png'
 import rightsquiggle from '../images/articles-right.png'
 import rightcurve from '../images/right-curve.png'
-
+import ArticleCard from './ArticleCard'
 import styled from 'styled-components'
 
 
@@ -56,7 +56,7 @@ const Articles = styled.div`
     
 `;
 
-const DesktopArticleGrid = () => {
+const DesktopArticleGrid = ({ articles }) => {
     return (
 
 
@@ -67,7 +67,9 @@ const DesktopArticleGrid = () => {
                 <img src={rightsquiggle}/>
             </Title>
             <Articles>
-                
+            {articles.map((article) => {
+                return <ArticleCard props={article} />;
+             })}
             </Articles>
         </GridContainer>
 

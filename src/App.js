@@ -23,10 +23,7 @@ function App() {
       <Header/>
       <Blurb blurb_text={data.blurb[0].blurb_text}/>
       <Playlist/>
-      <DesktopArticleGrid/>
-      <ArticleCard>articles={data.articles}</ArticleCard>
-      <Blurb></Blurb>
-      <Playlist></Playlist>
+      <DesktopArticleGrid articles={data.articles} />
       <Footer/>
     </div>
   );

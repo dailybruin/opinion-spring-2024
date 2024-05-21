@@ -60,8 +60,8 @@ const ByLine = styled.div`
 const ArticleCard = (props) => {
     return(
         <Container color={props.article_color}>
-            <Title>This is a really long article title. This is a really long title. {props.article_title}</Title>
-            <ByLine>BY JOE BRUIN {props.article_byline}</ByLine>
+            <Title>{props.article_title}</Title>
+            <ByLine>{props.article_byline}</ByLine>
         </Container>
     )
 }
