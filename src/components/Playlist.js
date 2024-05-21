@@ -7,7 +7,7 @@ import playlist_temp from '../images/playlist-temp.png'
 const Container = styled.div`
 margin-top: -300pt;
 position: relative;
-height: 1500px;
+height: 2000px;
 width: 100%;
 `
 const Curve = styled.div`
@@ -26,13 +26,26 @@ justify-content: center;
 position: absolute;
 width: 100%;
 top: 500px;
+.image {
+    flex-grow: 1;
+    width: 100%;
+    flex-basis: auto;
+}
 `
 const Text = styled.div`
+line-height: 96px;
+flex-grow: 1;
 color: #F0E8CE;
-margin-top: 30px;
+margin-top: 3.5vh;
 font-family: "Poppins", sans-serif;
 font-weight: 600;
-font-size: 4.4vw;
+font-size: 8vh;
+@media (max-width: 768px) {
+    font-size: 6vw;
+}
+@media (max-width: 480px) {
+    font-size: 8vw;
+}
 `
 
 const Playlist_content = styled.div`
