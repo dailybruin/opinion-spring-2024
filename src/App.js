@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import DesktopArticleGrid from "./components/MobileArticleGrid";
+import DesktopArticleGrid from "./components/DesktopArticleGrid";
 import MobileArticleGrid from "./components/MobileArticleGrid";
 import ArticleCard from './components/ArticleCard';
 import Playlist from './components/Playlist';
@@ -26,7 +26,6 @@ function App() {
             <Header/>
             <Blurb blurb_text={data.blurb[0].blurb_text}/>
             <Playlist/>
-            if (is)
             <MobileArticleGrid articles={data.articles} />
             <Footer/>
           </div>
@@ -41,7 +40,6 @@ function App() {
             <Header/>
             <Blurb blurb_text={data.blurb[0].blurb_text}/>
             <Playlist/>
-            if (is)
             <DesktopArticleGrid articles={data.articles} />
             <Footer/>
           </div>
