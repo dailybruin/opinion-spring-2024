@@ -11,6 +11,8 @@ const GridContainer = styled.div`
 	height: auto;
 	color: #F0E8CE;
     text-align: center;
+    /*display: grid;
+    grid-template-columns: repeat(3,1fr);*/
   /* margin-bottom: 20px; */
 `; 
 
@@ -53,12 +55,25 @@ const Title = styled.div`
 `;
 
 const Articles = styled.div`
-    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    & > div {
+        position: relative;
+    }
+
+    & > div:nth-child(even) {
+        margin-top: 25em;
+    }
+
+    & > div:nth-child(odd) {
+        left: 2em;
+    }
 `;
 
 const DesktopArticleGrid = ({ articles }) => {
     return (
-
 
         <GridContainer>
             <Title>
