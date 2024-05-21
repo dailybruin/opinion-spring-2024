@@ -14,6 +14,7 @@ const GridContainer = styled.div`
     /*display: grid;
     grid-template-columns: repeat(3,1fr);*/
   /* margin-bottom: 20px; */
+  position: relative;
 `; 
 
 // this section is for NOT resizing the article title + squiggle with page size

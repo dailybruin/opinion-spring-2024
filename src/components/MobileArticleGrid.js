@@ -18,18 +18,10 @@ const Title = styled.div`
     h1 {
         margin: 20px 0px 0px 0px;
         font-family: 'Poppins';
-        font-size: 4.4vw;
+        font-size: 6vw;
         font-weight: 600;
         line-height: 96px;
         flex-grow: 1;
-
-        /* Add media queries for responsive font sizing */
-        @media (max-width: 768px) {
-            font-size: 6vw;
-        }
-        @media (max-width: 480px) {
-            font-size: 8vw;
-        }
     }
     .image {
         flex-grow: 1;

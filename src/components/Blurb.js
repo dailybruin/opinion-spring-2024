@@ -9,6 +9,7 @@ const ImageContainer = styled.div`
   box-sizing: border-box;
   //   border-top-width: 20px;
   z-index: -1;
+  padding-bottom: 5vh;
   ${mediaQueries.mobile} {
     border-width: 12px;
   }
@@ -16,7 +17,7 @@ const ImageContainer = styled.div`
 const BlurbContainer = styled.div`
   position: relative;
   top: -85px;
-  overflow: hidden;
+  // overflow: hidden;
   ${mediaQueries.mobile} {
     top: -40px;
     font-size: 10px;

@@ -6,12 +6,11 @@ import Purple from '../images/purple-cassette.png';
 
 const Container = styled.div`
     margin: 1.5%;
+    margin-left: 7%;
     background-color: #051626;
-    width: 50vw;
-    height: 30vw;
-    max-width: 568.61px;
-    max-height: 348.46px;
-    transition: box-shadow 0.3s ease;
+    width: 40vw;
+    height: 25vw;
+    transition: box-shadow 0.3s ease, width 0.3s ease, height 0.3s ease;
     &:hover {
         box-shadow: 0 0 20px 5px rgba(201, 83, 174, 0.7);
     }
@@ -34,6 +33,13 @@ const Container = styled.div`
     }};
     background-size: cover;
     background-position: center;
+
+
+    @media (max-width: 480px) {
+        width: 90vw;
+        height: 60vw;
+        margin-left: 0%;
+    }
 `;
 
 const Title = styled.div`
@@ -49,7 +55,7 @@ const Title = styled.div`
     color: #051626;
 
     @media (max-width: 768px) {
-        font-size: 5vw;
+        font-size: 4.5vw;
     }
 `;
 
