@@ -7,7 +7,7 @@ import playlist_temp from '../images/playlist-temp.png'
 const Container = styled.div`
 margin-top: -300pt;
 position: relative;
-height: 2000px;
+height: 1500px;
 width: 100%;
 `
 const Curve = styled.div`
@@ -32,7 +32,7 @@ color: #F0E8CE;
 margin-top: 30px;
 font-family: "Poppins", sans-serif;
 font-weight: 600;
-font-size: 10vh;
+font-size: 4.4vw;
 `
 
 const Playlist_content = styled.div`

@@ -1,22 +1,26 @@
-import styled from 'styled-components'
-import Orange from '../images/orange-cassette.png'
-import Yellow from '../images/yellow-cassette.png'
-import Red from '../images/red-cassette.png'
-import Purple from '../images/purple-cassette.png'
+import styled from 'styled-components';
+import Orange from '../images/orange-cassette.png';
+import Yellow from '../images/yellow-cassette.png';
+import Red from '../images/red-cassette.png';
+import Purple from '../images/purple-cassette.png';
 
 const Container = styled.div`
-    margin: 15px;
+    margin: 1.5%;
     background-color: #051626;
-    width: 568.61px;
-    height: 348.46px;
+    width: 50vw;
+    height: 30vw;
+    max-width: 568.61px;
+    max-height: 348.46px;
     transition: box-shadow 0.3s ease;
-    &: hover {
+    &:hover {
         box-shadow: 0 0 20px 5px rgba(201, 83, 174, 0.7);
     }
     display: flex;
     align-items: center;
+    justify-content: center;
+    position: relative;
     background-image: ${props => {
-        switch(props.color){
+        switch(props.color) {
             case "yellow":
                 return `url(${Yellow})`;
             case "red":
@@ -28,37 +32,51 @@ const Container = styled.div`
                 return `url(${Orange})`;
         }
     }};
-    
-`
-const Title = styled.div `
-    height: 81px;
-    width: 450px;
+    background-size: cover;
+    background-position: center;
+`;
+
+const Title = styled.div`
+    width: 80%;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 2vw;
     text-align: center;
     font-family: "Caveat", cursive;
-    position: relative;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: #051626;
-    top: -4em;
-    left: 3em;
-`
+
+    @media (max-width: 768px) {
+        font-size: 5vw;
+    }
+`;
+
 const ByLine = styled.div`
+    width: 80%;
     color: #F0E8CE;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1.5vw;
     text-align: center;
-    position: relative;
-    top: 3.1em;
-    left: -12em;
-`
-const ArticleCard = (props) => {
-    return(
+    position: absolute;
+    bottom: 36%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+
+    @media (max-width: 768px) {
+        font-size: 2.5vw;
+    }
+`;
+
+const ArticleCard = ({props}) => {
+    return (
         <Container color={props.article_color}>
-            <Title>Title{props.article_title}</Title>
-            <ByLine>BY JOE BRUIN{props.article_byline}</ByLine>
+            <Title>{props.article_title}</Title>
+            <ByLine>{props.article_byline}</ByLine>
         </Container>
-    )
-}
+    );
+};
 
 export default ArticleCard;
