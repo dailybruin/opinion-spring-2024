@@ -23,10 +23,13 @@ const Title = styled.div`
         line-height: 96px;
         flex-grow: 1;
     }
-    .image {
-        flex-grow: 1;
+    img {
+        display: block;
         width: 100%;
-        flex-basis: auto;
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+        overflow: hidden;
     }
     display: flex;
     justify-content: center;
