@@ -64,7 +64,7 @@ const Title = styled.div`
     img {
         display: block;
         width: 100%;
-        height: auto;
+        
         max-width: 100%;
         object-fit: contain;
         overflow: hidden;
