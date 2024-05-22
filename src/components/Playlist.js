@@ -68,6 +68,7 @@ const Title = styled.div`
         max-width: 100%;
         object-fit: contain;
         overflow: hidden;
+        margin-top: 6%;
     }
 `
 
