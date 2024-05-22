@@ -61,10 +61,13 @@ const Title = styled.div`
     height: auto;
     width: 100%;
     z-index: 10; /* Ensure this is lower than PlaylistContent */
-    .image {
-        flex-grow: 1;
+    img {
+        display: block;
         width: 100%;
-        flex-basis: auto;
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+        overflow: hidden;
     }
 `
 
