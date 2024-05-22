@@ -57,7 +57,7 @@ const Title = styled.div`
     color: #051626;
 
     @media (max-width: 768px) {
-        font-size: 4.5vw;
+        font-size: 3.5vw;
     }
 `;
 
