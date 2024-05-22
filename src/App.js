@@ -25,7 +25,7 @@ function App() {
           <div className="App" style={{ backgroundColor: "#08091F" }}>
             <Header/>
             <Blurb blurb_text={data.blurb[0].blurb_text}/>
-            <Playlist/>
+            <Playlist playlist_img={data.playlist[0].playlist}/>
             <MobileArticleGrid articles={data.articles} />
             <Footer/>
           </div>
@@ -39,7 +39,7 @@ function App() {
           <div className="App" style={{ backgroundColor: "#08091F" }}>
             <Header/>
             <Blurb blurb_text={data.blurb[0].blurb_text}/>
-            <Playlist/>
+            <Playlist playlist_img={data.playlist[0].playlist}/>
             <DesktopArticleGrid articles={data.articles} />
             <Footer/>
           </div>

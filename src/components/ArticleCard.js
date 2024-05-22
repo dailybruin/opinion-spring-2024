@@ -8,6 +8,7 @@ const Container = styled.div`
     margin: 1.5%;
     margin-left: 7%;
     background-color: #051626;
+    z-index: 2;
     width: 40vw;
     height: 25vw;
     transition: box-shadow 0.3s ease, width 0.3s ease, height 0.3s ease;
@@ -36,9 +37,10 @@ const Container = styled.div`
 
 
     @media (max-width: 480px) {
-        width: 90vw;
-        height: 60vw;
+        width: 75vw;
+        height: 50vw;
         margin-left: 0%;
+        margin-top: 20%;        //adjusts vertical gap between cards on mobile
     }
 `;
 
