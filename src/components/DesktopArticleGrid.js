@@ -13,7 +13,7 @@ const GridContainer = styled.div`
     text-align: center;
     /*display: grid;
     grid-template-columns: repeat(3,1fr);*/
-  /* margin-bottom: 20px; */
+    padding-top: 10%;
   position: relative;
 `; 
 

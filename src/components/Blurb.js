@@ -26,18 +26,20 @@ const BlurbContainer = styled.div`
 
 const OverlayText = styled.div`
   position: absolute;
-  top: 25%;
-  left: 50%;
+  top: 28%;
+  left: 47%;
   transform: translate(-50%, -50%);
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal;
-  font-size: 1.5vh;
+  font-size: 2.4vh;
   color: #f0e8ce;
+  width: 70%;
   ${mediaQueries.mobile} {
-    width: 250px;
+    width: 70%;
+    top: 20%;
     height: 15%;
-    font-size: 1vh;
+    font-size: 1.6vh;
   }
 `;
 

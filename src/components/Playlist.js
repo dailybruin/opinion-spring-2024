@@ -3,11 +3,12 @@ import left_curve from '../images/left-curve.png'
 import right_curve from '../images/right-curve.png'
 import playlist_left from '../images/playlist-left.png'
 import playlist_right from '../images/playlist-right.png'
+import { mediaQueries } from '../shared/config'
 
 const Container = styled.div`
     margin-top: 20vh;
     position: relative;
-    height: 100%;
+    height: 120%;
     width: 100%;
 `
 
@@ -54,23 +55,30 @@ const CurveRight = styled.div`
 `
 
 const Title = styled.div`
-    display: flex;
-    margin-top: -20vh;
-    justify-content: center;
-    position: relative;
-    height: auto;
-    width: 100%;
-    z-index: 10; /* Ensure this is lower than PlaylistContent */
+    h1 {
+        margin: 20px 0px 0px 0px;
+        font-family: 'Poppins';
+        font-size: 4.4vw;
+        font-weight: 600;
+        line-height: 96px;
+        flex-grow: 1;
+    }
     img {
         display: block;
         width: 100%;
-        
+        height: auto;
         max-width: 100%;
         object-fit: contain;
         overflow: hidden;
-        margin-top: 6%;
     }
-`
+    display: flex;
+    column-gap: 1vw;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+`;
+
 
 const Text = styled.div`
     line-height: 96px;
@@ -90,6 +98,7 @@ const PlaylistContent = styled.div`
     position: relative;
     z-index: 20; /* Ensure this is higher than CurveRight */
     padding-bottom: 5%;
+    padding-top: 5%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -113,8 +122,24 @@ const PlaylistContent = styled.div`
     }
 `
 
-const Playlist = (props) => {
-    const image = props.playlist_img
+const Credits = styled.div`
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.4vh;
+    color: #f0e8ce;
+    text-align: right;
+    z-index: 10;
+    position: relative;
+  padding-right: 21%;
+  margin-top: -4%;
+  ${mediaQueries.mobile} {
+    font-size: 8px;
+  }
+`;
+
+const Playlist = ({playlist}) => {
+    const image = playlist[0].playlist_img
     return (
         <Container>
             <CurveLeft>
@@ -131,6 +156,9 @@ const Playlist = (props) => {
             <PlaylistContent>
                 <img src={image} alt="playlist content" />
             </PlaylistContent>
+            <Credits>
+                {playlist[0].playlist_text}
+            </Credits>
         </Container>
     )
 }

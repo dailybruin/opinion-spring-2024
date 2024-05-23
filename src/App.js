@@ -9,6 +9,7 @@ import ArticleCard from './components/ArticleCard';
 import Playlist from './components/Playlist';
 import Blurb from './components/Blurb';
 import { isMobile } from 'react-device-detect';
+import Landing from "./components/Landing";
 
 function App() {
   const [ data, setData ] = useState(null);
@@ -19,13 +20,18 @@ function App() {
 		.then(res => setData(res.data['article.aml']))
   }, [])
 
+  if (data) {
+    console.log("Data:", data);
+  }
+
     if (isMobile) 
       {
         return data && (
           <div className="App" style={{ backgroundColor: "#08091F" }}>
             <Header/>
+            <Landing landing={data.landing}/>
             <Blurb blurb_text={data.blurb[0].blurb_text}/>
-            <Playlist playlist_img={data.playlist[0].playlist}/>
+            <Playlist playlist={data.playlist}/>
             <MobileArticleGrid articles={data.articles} />
             <Footer/>
           </div>
@@ -38,8 +44,9 @@ function App() {
         return data && (
           <div className="App" style={{ backgroundColor: "#08091F" }}>
             <Header/>
+            <Landing landing={data.landing}/>
             <Blurb blurb_text={data.blurb[0].blurb_text}/>
-            <Playlist playlist_img={data.playlist[0].playlist}/>
+            <Playlist playlist={data.playlist}/>
             <DesktopArticleGrid articles={data.articles} />
             <Footer/>
           </div>
