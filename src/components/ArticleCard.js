@@ -5,6 +5,7 @@ import Red from '../images/red-cassette.png';
 import Purple from '../images/purple-cassette.png';
 
 const Container = styled.div`
+    border-radius: 4vh;
     margin: 1.5%;
     margin-left: 7%;
     background-color: #051626;
@@ -81,9 +82,12 @@ const ByLine = styled.div`
 const ArticleCard = ({props}) => {
     return (
         <Container color={props.article_color}>
+             <a href={props.article_url} style={{ textDecoration: 'none', color: 'inherit' }}>
             <Title>{props.article_title}</Title>
+            </a>
             <ByLine>{props.article_byline}</ByLine>
         </Container>
+
     );
 };
 
