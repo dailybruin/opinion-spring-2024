@@ -7,6 +7,7 @@ const ImageContainer = styled.div`
   padding-top: 12%;
   width: 100%;
   box-sizing: border-box;
+  overflow: hidden;
   //   border-top-width: 20px;
   z-index: -1;
   padding-bottom: 5vh;
