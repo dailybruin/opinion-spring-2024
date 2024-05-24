@@ -135,11 +135,22 @@ const Credits = styled.div`
   margin-top: -4%;
   ${mediaQueries.mobile} {
     font-size: 8px;
+    padding-bottom: 11%;
   }
 `;
 
+const StyledIframe = styled.iframe`
+    width: 60%;
+    height: 650px;
+    border: none;
+    @media (max-width: 480px) {
+        height: 400px;
+        width: 80%;
+    }
+`;
+
+
 const Playlist = ({playlist}) => {
-    const image = playlist[0].playlist_img
     return (
         <Container>
             <CurveLeft>
@@ -154,7 +165,10 @@ const Playlist = ({playlist}) => {
                 <img src={playlist_right} className="right" alt="playlist right" />
             </Title>
             <PlaylistContent>
-                <img src={image} alt="playlist content" />
+                <StyledIframe
+                    src={playlist[0].playlist_link}
+                    style={{ border: "none" }}  // Correct way to apply styles in JSX
+                ></StyledIframe>
             </PlaylistContent>
             <Credits>
                 {playlist[0].playlist_text}
