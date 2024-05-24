@@ -128,15 +128,18 @@ const Credits = styled.div`
     font-style: normal;
     font-size: 2.4vh;
     color: #f0e8ce;
-    text-align: right;
-    z-index: 10;
+    text-align: center;
     position: relative;
-  padding-right: 21%;
-  margin-top: -4%;
-  ${mediaQueries.mobile} {
-    font-size: 8px;
-    padding-bottom: 11%;
-  }
+    z-index: 10;
+    padding-left: 20%;
+    width: 60%;
+    margin-top: -4%;
+    
+    @media (max-width: 480px) {
+        font-size: 0.9vh;
+        width: 80%;
+        padding-left: 10%;
+    }
 `;
 
 const StyledIframe = styled.iframe`

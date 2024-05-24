@@ -35,12 +35,13 @@ const OverlayText = styled.div`
   font-size: 2.4vh;
   color: #f0e8ce;
   width: 70%;
-  ${mediaQueries.mobile} {
+
+  @media (max-width: 480px) {
     width: 70%;
     top: 20%;
     height: 15%;
-    font-size: 1.6vh;
-  }
+    font-size: 0.9vh;
+}
 `;
 
 const OverlayCassetteImage = styled.img`
