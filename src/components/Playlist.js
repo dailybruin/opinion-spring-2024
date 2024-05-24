@@ -49,7 +49,7 @@ const CurveRight = styled.div`
     @media (max-width: 480px) {
         img {
             width: 30%;
-            margin-top: 35%;
+            margin-top: 90%;
         }
     }
 `
